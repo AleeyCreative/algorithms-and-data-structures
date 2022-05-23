@@ -31,6 +31,8 @@ class PriorityQueue {
   getType() {
     return this.isMinPriorityQueue ? queueTypes.MIN : queueTypes.MAX;
   }
+
+  //O(n)
   enqueue(item) {
     if (this.isEmpty()) {
       this.collection.push(item);
@@ -60,6 +62,7 @@ class PriorityQueue {
     return true;
   }
 
+  // O(1)
   dequeue() {
     let dequeuedItem = collection.shift();
     return dequeuedItem;
